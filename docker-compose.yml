@@ -1,0 +1,13 @@
+version: "3"
+services:
+  react:
+    image: node:latest
+    container_name: node_react
+    volumes:
+      - ./front:/front
+    working_dir: /front
+    ports:
+      - 3000:3000
+    tty: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
